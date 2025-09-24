@@ -1,0 +1,114 @@
+PART I – STACK
+ Data Structure Type: Stack (LIFO – Last In, First Out)
+
+A. Basics
+Q1: How does this show the LIFO nature of stacks?
+✔ In the MTN MoMo app, each step (like entering payment details) is pushed onto a stack. When the user presses the back button, the last step (most recent) is popped off. This demonstrates LIFO, The last item added is the first removed.
+Q2: Why is this action similar to popping from a stack?
+✔ In UR Canvas, going back in navigation removes the most recent screen. This is equivalent to the pop () operation, which removes the top element of a stack  following LIFO.
+B. Application
+Q3: How could a stack enable the undo function when correcting mistakes?
+✔ Each action e.g., entering an amount or confirming a transaction is pushed onto a stack. To undo, a pop () operation removes the last action. This allows for reversing changes step-by-step, without affecting earlier actions.
+
+Q4: How can stacks ensure forms are correctly balanced?
+✔ During form validation like ,in Irembo, opening fields or brackets are pushed onto a stack. When a closing field appears, the stack is popped to check for a match. If at the end the stack is empty, the form is balanced.
+ This is similar to checking balanced parentheses using a stack.
+
+C. Logical
+Q5: Which task is next (top of stack)?
+Push("CBE notes")
+Push("Math revision")
+Push("Debate")Pop()  # removes "Debate"
+Push("Group assignment")
+✔ Stack from top to bottom:
+Group assignment → Math revision → CBE notes
+Answer: Group assignment
+Q6: Which answers remain in the stack after undoing 3 actions?
+✔ If a student undoes 3 actions ,3 pop() operations, the last 3 tasks added will be removed.
+Only the earlier pushed tasks at the bottom of the stack remain.
+This models undo functionality using LIFO.
+
+D. Advanced Thinking
+Q7: How does a stack enable this retracing process?
+✔ In RwandAir booking, each step is pushed onto the stack. Pressing back pops the most recent step, allowing the user to traverse the steps in reverse order.
+ This mirrors how backtracking algorithms use stacks
+Q8: Show how a stack algorithm reverses the proverb (Umwana ni umutware).
+Algorithm:
+sentence = ["Umwana", "ni", "umutware"]
+stack = []
+for word in sentence:
+    stack. append(word)  # Push each word
+
+while stack:
+    print(stack. pop (), end=" ")  # Pop to reverse
+✅ Output: "Umutware ni Umwana"
+ Stacks are commonly used for reversing strings,  sentences, or arrays.
+
+Q9: Why does a stack suit this case better than a queue?
+✔ In DFS (e.g., searching in a library), a stack is used because it allows the algorithm to go deep first, storing unexplored paths. Backtracking is done by popping from the stack.
+A queue is used in BFS, which explores broadly, not deeply.
+
+Q10: Suggest a feature using stacks for transaction navigation.
+✔ Feature: Transaction History Back Navigation
+•	Each screen/transaction is pushed onto a stack.
+•	Pressing “Back” pops the last screen.
+ This gives efficient, ordered navigation, using the LIFO structure.
+PART II – QUEUE
+Data Structure Type: Queue (FIFO – First In, First Out)
+
+A. Basics
+Q1: How does this show FIFO behavior?
+✔ At the restaurant, the first customer to arrive is served first, just like a queue where elements are dequeuer in the order they were enqueuer.
+
+Q2: Why is this like a dequeuer operation?
+✔ In a YouTube playlist, the first video added plays first, similar to dequeuer(), which removes the front element of the queue.
+
+B. Application
+Q3: How is this a real-life queue?
+✔ At RRA offices, customers arrive and enqueuer. They are served in order, and dequeuer happens when each is attended to.
+ Real-life FIFO model.
+Q4: How do queues improve customer service?
+✔ Queues prevent disorder by serving in order of arrival.
+Efficient queue management leads to fairness, reduced waiting time, and better resource allocation.
+
+C. Logical
+Q5: Who is at the front now?
+Enqueuer("Alice")  front
+Enqueuer("Eric")
+Enqueuer("Chantal")
+Dequeuer ()removes Alice
+Enqueuer("Jean")
+Final Queue: Eric (front) → Chantal → Jean
+ Answer: Eric
+
+Q6: Explain how a queue ensures fairness.
+✔ In a queue, elements are served in the order they arrive (FIFO). This ensures equal opportunity and avoids favoritism  the first to come is the first served.
+
+D. Advanced Thinking
+Q7: Explain how each maps to real Rwandan life.
+•	Linear Queue: Buffet lines at weddings  join at the back, served in order.
+•	Circular Queue: Buses at Nyamirambo, after completing trips, they rejoin the queue.
+•	Deque: Bus boarding from both front and rear  elements can be added/removed at both ends.
+
+Q8: How can queues model this process?
+✔ At a restaurant:
+•	Orders are enqueuer when made.
+•	When ready, they are dequeuer and served.
+ This models a producer consumer scenario using a FIFO queue.
+Q9: Why is this a priority queue, not a normal queue?
+ In normal queues, the order of arrival determines service.
+At CHUK hospital, emergency cases are prioritized regardless of arrival time.
+This is modeled by a priority queue, where each element has a priority value.
+
+Q10: How would queues fairly match drivers and students?
+Two queues:
+•	Queue A = Students
+•	Queue B = Drivers
+Algorithm:
+•	Dequeuer one student and one driver at a time  match them
+This guarantees fair matching using FIFO on both sides.
+
+
+
+
+
