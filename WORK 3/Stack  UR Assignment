@@ -1,0 +1,14 @@
+# Stack simulation for UR assignments
+stack = []
+
+# Push assignments
+stack.append("Assignment1")
+stack.append("Assignment2")
+stack.append("Assignment3")
+
+# Undo 2 actions (pop twice)
+stack.pop()
+stack.pop()
+
+# Output remaining stack
+print("Remaining in stack:", stack)

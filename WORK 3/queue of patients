@@ -1,0 +1,13 @@
+# Define the queue of patients
+patient_queue = ["Patient1", "Patient2", "Patient3", "Patient4", "Patient5", "Patient6", "Patient7"]
+
+# Simulate serving patients
+served_patients = []
+
+# Serve the first two patients
+for _ in range(2):
+    served = patient_queue.pop(0)  # FIFO: remove from front
+    served_patients.append(served)
+
+# Output the second served patient
+print("Second patient served:", served_patients[1])

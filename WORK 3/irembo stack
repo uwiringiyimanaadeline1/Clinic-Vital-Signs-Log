@@ -1,0 +1,20 @@
+# Stack implementation using list
+stack = []
+
+# Push steps onto the stack
+stack.append("Step1")
+stack.append("Step2")
+stack.append("Step3")
+
+print("Initial stack:", stack)
+
+# Undo 1 step (pop the top)
+stack.pop()
+
+print("Stack after undoing 1 step:", stack)
+
+# Show the current top of the stack
+if stack:
+    print("Top of the stack is:", stack[-1])
+else:
+    print("Stack is empty.")

@@ -1,0 +1,35 @@
+Stack challenge
+ Challenge: Stack Operations
+Sequence of operations:
+1.	Push "1" → Stack: ["1"]
+2.	Push "2" → Stack: ["1", "2"]
+3.	Push "3" → Stack: ["1", "2", "3"]
+4.	Push "4" → Stack: ["1", "2", "3", "4"]
+5.	Pop all → Stack becomes empty: []
+6.	Push "5" → Stack: ["5"]
+✅ Top of the stack now: "5"
+.Reflection: Why Stacks Are Ideal for Undo/Redo Systems
+Stacks follow the Last In, First Out (LIFO) principle, which perfectly mirrors how undo/redo actions work:
+•	Undo: You want to reverse the most recent action first. That’s exactly what a stack does—pops the last item pushed.
+•	Redo: Often implemented with a second stack. When you undo, the action is pushed onto the redo stack. Redoing pops from that stack.
+Example:
+•	You type "Hello" → push "Hello"
+•	You type "World" → push "World"
+•	You hit undo → pop "World"
+•	You hit redo → push "World" back
+QUEUE CHALLENGE.
+Challenge: Queue vs Stack for Exam Registration
+Which works better?  Queue
+Why?
+•	Queue = First In, First Out (FIFO): Students register in the order they arrive.
+•	Stack = Last In, First Out (LIFO): The last student to register would be processed first—not fair In exam registration, fairness and order matter. A queue ensures that the first student to register is the first to be processed, just like lining up at a counter Reflection: Why FIFO Ensures Fairness in Student Services
+FIFO (First In, First Out) is the backbone of fairness in systems like:
+•	Course registration
+•	Library book requests
+•	Counseling appointments
+Here’s why it works:
+•	 Respects time of arrival: No one gets skipped just because they came early.
+•	 Prevents favoritism: Everyone is treated equally, based on when they joined the queue.
+•	 Predictable and transparent: Students know their turn is coming, reducing anxiety and confusion.
+Analogy: Imagine a cafeteria line—cutting ahead breaks trust. FIFO keeps the line fair and flowing.
+

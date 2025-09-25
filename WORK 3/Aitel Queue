@@ -1,0 +1,16 @@
+from collections import deque
+
+# Airtel scenario: 6 clients queue, 3 served
+airtel_queue = deque(["Client1", "Client2", "Client3", "Client4", "Client5", "Client6"])
+print("Airtel Queue - Initial:", list(airtel_queue))
+
+# Serve 3 clients
+for _ in range(3):
+    served = airtel_queue.popleft()
+    print("Served from Airtel:", served)
+
+# Who is now in front?
+if airtel_queue:
+    print("Now in front at Airtel:", airtel_queue[0])
+else:
+    print("Airtel queue is empty.")
